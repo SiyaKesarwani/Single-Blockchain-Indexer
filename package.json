@@ -1,0 +1,25 @@
+{
+  "name": "secondary-logger-indexer",
+  "version": "1.0.0",
+  "description": "Indexer service to index data from blockchain and store in database",
+  "main": "dist/run.js",
+  "scripts": {
+    "build": "tsc",
+    "start:local": "npm run build && NODE_ENV=local node dist/server.js",
+    "start:dev": "npm run build && NODE_ENV=development node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
+  },
+  "author": "Henry",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.649.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "ioredis": "^5.4.1",
+    "mongoose": "^8.5.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
